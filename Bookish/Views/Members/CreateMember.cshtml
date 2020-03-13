@@ -1,0 +1,19 @@
+﻿@model Bookish.Models.Request.CreateMemberModel
+
+@{
+    ViewBag.Title = "Create a new Member";
+    Layout = "_Layout";
+}
+
+<h2>Create a member</h2>
+<form asp-controller="Members" asp-action="CreateMember" method="post">
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName"/>
+    <span asp-validation-for="FirstName"></span>
+    
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName"/>
+    <span asp-validation-for="LastName"></span>
+    
+    <button type="submit">Submit</button>
+</form>

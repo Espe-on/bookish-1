@@ -1,0 +1,19 @@
+﻿@model Bookish.Models.Response.MembersModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>All Members</h2>
+
+<ul>
+    @foreach (var member in Model.Members)
+    {
+        <li>
+            <h3>@member.DisplayName</h3>
+            <p></p>
+        </li>    
+    }    
+</ul>
+
